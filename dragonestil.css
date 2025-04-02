@@ -1,0 +1,148 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('fondodragon.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+}
+
+header {
+    background-color: #333; /* Fondo oscuro sin transparencia */
+    height: 200px; /* Altura más pequeña */
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Cambiar de sticky a relative */
+    transition: top 0.3s; /* Transición suave cuando se oculte o muestre */
+}
+
+header img {
+    width: 400px;
+    height: auto;
+}
+
+nav {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+nav button {
+    background-color: #ffcc00;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    margin: 0 15px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+nav button:hover {
+    background-color: #f1a800;
+    transform: scale(1.1);
+}
+
+section {
+    margin: 40px 20px;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+    scroll-padding-top: 220px; /* Evitar que el header tape el contenido al hacer scroll */
+}
+
+section h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #ffcc00;
+    font-weight: 600;
+}
+
+section p, ul li {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #fff;
+}
+
+section img {
+    width: 100%;
+    height: auto;
+    margin-top: 15px;
+    border-radius: 8px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    font-size: 14px;
+}
+
+/* Estilos para la sección de personajes */
+#personajes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.personaje {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 48%;
+}
+
+.personaje img {
+    width: 150px;
+    height: auto;
+    margin-left: 20px;
+}
+
+.personaje div {
+    max-width: 70%;
+}
+
+/* Adaptación para pantallas pequeñas */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    nav button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    section h2 {
+        font-size: 24px;
+    }
+
+    .personaje {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .personaje img {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+}

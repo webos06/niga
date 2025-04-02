@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragon Ball</title>
+    <link rel="stylesheet" href="dragonestil.css">
+</head>
+<body>
+    <header>
+        <img src="titulo.jpg" alt="Dragon Ball" width="400">
+        <nav>
+            <button onclick="location.href='#introduccion'">Introducción</button>
+            <button onclick="location.href='#historia'">Historia</button>
+            <button onclick="location.href='#personajes'">Personajes</button>
+            <button onclick="location.href='#poderes'">Escala de Poder</button>
+            <button onclick="location.href='Inicio.html'">Atras</button>
+        </nav>
+    </header>
+
+    <section id="introduccion">
+        <h2>Introducción</h2>
+        <p>Dragon Ball es un anime creado por Akira Toriyama en 1986, basado en el manga del mismo nombre. La historia de Dragon Ball sigue las aventuras de Son Goku, un niño con una fuerza sobrehumana que vive en una tierra llena de misterios y criaturas extraordinarias. Desde su lanzamiento, Dragon Ball ha sido una de las series más exitosas y queridas en la cultura pop mundial.</p>
+        <p>Este anime comenzó como un simple proyecto inspirado en la clásica novela china "Viaje al Oeste", pero rápidamente se transformó en un fenómeno global, convirtiéndose en una de las franquicias más icónicas de la historia del anime.</p>
+        <img src="db.jpg" alt="Introducción Dragon Ball" style=" width: 700px; height: auto">
+    </section>
+
+    <section id="introduccion">
+        <h2>Autor</h2>
+        
+        <p>
+            Akira Toriyama, nacido en 1955 en Japón, es el creador de Dragon Ball, una de las series de manga y anime más populares del mundo. Comenzó su carrera en 1978 y alcanzó la fama con Dragon Ball en 1984. Es reconocido por su estilo único de dibujo y por haber dejado una huella profunda en la cultura del manga y el anime.</p>
+        <img src="akira.jpg" alt="Introducción Dragon Ball" style=" width: 400px; height: auto" />
+    </section>
+
+    <section id="historia">
+        <h2>Historia</h2>
+        <p>Dragon Ball narra la vida de Goku, un joven de cola de mono que tiene una fuerza increíble y una curiosidad insaciable por explorar el mundo. A lo largo de la serie, Goku busca las Esferas del Dragón, poderosas gemas mágicas que, cuando se reúnen todas, invocan a un dragón que concede un deseo.</p>
+        <p>A medida que avanza la serie, Goku se enfrenta a una variedad de villanos poderosos, y en el camino, se hace amigo de personajes como Bulma, Krillin, y Piccolo. A lo largo de las diferentes sagas, Goku se transforma en un guerrero más fuerte, enfrentando desafíos cada vez mayores y alcanzando nuevas formas de poder, como el Super Saiyan.</p>
+        <img src="hdb.jpg" alt="Historia Dragon Ball" style=" width: 1000px; height: auto" />
+    </section>
+
+    <section id="personajes">
+        <h2>Personajes</h2>
+        <div class="personaje">
+            <div>
+                <h3>Goku</h3>
+                <p>Goku es el protagonista principal de Dragon Ball. Es un guerrero Saiyan que posee una fuerza increíble y una habilidad excepcional para aprender técnicas de combate. Goku es conocido por su valentía, su corazón puro y su amor por el entrenamiento. A lo largo de la serie, se transforma en uno de los luchadores más poderosos del universo.</p>
+            </div>
+            <img src="songoku.jpg" alt="Goku" />
+        </div>
+        <div class="personaje">
+            <div>
+                <h3>Vegeta</h3>
+                <p>Vegeta es el príncipe de los Saiyans y uno de los personajes más complejos de Dragon Ball. A pesar de ser inicialmente un villano, Vegeta se convierte en un aliado de Goku y uno de los luchadores más poderosos de la serie. Su orgullo y ambición lo empujan a buscar siempre superar a Goku, convirtiéndolo en un rival formidable.</p>
+            </div>
+            <img src="vegeta.jpg" alt="Vegeta" />
+        </div>
+        <div class="personaje">
+            <div>
+                <h3>Piccolo</h3>
+                <p>Piccolo es un Namekiano y uno de los personajes más importantes de la serie. Inicialmente, era uno de los enemigos de Goku, pero con el tiempo se convierte en uno de sus aliados más cercanos y en una figura paternal para Gohan, el hijo de Goku. Su sabiduría y habilidades en combate lo convierten en uno de los personajes más queridos.</p>
+            </div>
+            <img src="piccolo.jpg" alt="Piccolo" />
+        </div>
+    </section>
+
+    <section id="poderes">
+        <h2>Escala de Poder</h2>
+        <p>La escala de poder en Dragon Ball es un concepto central de la serie. Cada vez que un personaje alcanza un nuevo nivel de poder, su fuerza aumenta de forma exponencial. Los Saiyans, como Goku y Vegeta, tienen la capacidad de transformarse en formas más poderosas como el Super Saiyan, lo que les permite enfrentar amenazas cada vez mayores.</p>
+        <p>Además de las transformaciones, los personajes de Dragon Ball cuentan con una amplia gama de habilidades, como el Kamehameha, una técnica de energía extremadamente poderosa utilizada principalmente por Goku, o el Final Flash de Vegeta, otro ataque devastador. Las batallas en Dragon Ball son intensas, y cada nuevo enfrentamiento muestra una escala de poder aún más impresionante.</p>
+        <img src="poder.jpg" alt="Escala de Poder Dragon Ball" style=" width: 1000px; height: auto" />
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Dragon Ball</p>
+    </footer>
+
+    <!-- Código JavaScript para ocultar el header al hacer scroll -->
+    <script>
+        // Detecta el desplazamiento del scroll
+        let lastScrollTop = 0;
+        const header = document.querySelector("header");
+
+        window.addEventListener("scroll", function() {
+            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            
+            // Si haces scroll hacia abajo
+            if (currentScroll > lastScrollTop) {
+                header.style.top = "-200px"; // Ocultar el header moviéndolo hacia arriba
+            } else {
+                header.style.top = "0"; // Mostrar el header de nuevo
+            }
+
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Asegura que lastScrollTop no sea negativo
+        });
+    </script>
+</body>
+</html>
